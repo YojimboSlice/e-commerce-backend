@@ -6,8 +6,6 @@ const router = express.Router();
 // Set your SendGrid API key
 sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
 
-console.log(process.env.SEND_GRID_API_KEY);
-
 router.post("/", (req, res) => {
   const { recipientEmail, emailSubject, emailText, emailHtml } = req.body;
 
