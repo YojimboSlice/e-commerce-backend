@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const sgMail = require("@easypost/api");
 const app = express();
 
-const port = 3000;
+const port = process.port.ENV || 3000;
 
 // Enable middleware for parsing JSON and handling CORS
 app.use(express.static("public"));
